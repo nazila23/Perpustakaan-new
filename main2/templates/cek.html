@@ -1,0 +1,33 @@
+{% extends "sidebarpustaka.html" %}
+{% block content %}
+{% load static %}
+<!-- ======= Header ======= -->
+        <table id="cari" class="table table-striped table-bordered" style="width:100%">
+          <thead>
+              <tr>
+                <th>NO</th>
+                <th>Nama</th>
+                <th>Anggota Sejak</th>
+                <th>Berlaku Hingga</th>
+                <th>Instansi</th>
+              </tr>
+          </thead>
+          <tbody>
+            {% for z in datanama %} 
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td><a href="/main2/peminjaman/{{z.id}}">{{z.nama}}</a></td>
+              <td>{{z.tanggal_registrasi}}</td>
+              <td>{{z.berlaku_hingga}}</td>
+              <td>{{z.instansi}}</td>
+            </tr>
+            {% endfor %}   
+          </tbody>          
+      </table>    
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#cari').DataTable();
+    }   );
+</script>
+  {% endblock %}
+  

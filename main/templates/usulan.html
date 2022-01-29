@@ -1,0 +1,64 @@
+{% extends "sidebar.html" %}
+{% block content %}
+{% load static %}
+
+  <!-- <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Usulan Koleksi</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Users</li>
+          <li class="breadcrumb-item active">Usulan Koleksi</li>
+        </ol>
+      </nav>
+    </div> -->
+    <!-- End Page Title -->
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Silahkan Usul Buku yang anda butuhkan</h3>
+          <!-- Vertical Form -->
+          <form class="row g-3" method="POST">
+            {% csrf_token %}
+            <div class="col-12">
+              <label for="inputNanme4" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="inputNanme4" name="nama">
+            </div>
+            <div class="col-12">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" name="email">
+            </div>
+            <div class="col-12">
+              <label for="inputJudul4" class="form-label">Judul</label>
+              <input type="text" class="form-control" id="inputJudul" name="judul">
+            </div>
+            <div class="col-12">
+              <label for="inputPengarang" class="form-label">Pengarang</label>
+              <input type="text" class="form-control" id="inputPengarang" name="pengarang">
+            </div>
+            <div class="col-12">
+              <label for="inputTahun Terbit" class="form-label">Tahun Terbit</label>
+              <input type="text" class="form-control" id="inputTahun Terbit" name="tahun_terbit">
+            </div>
+            <div class="col-12">
+              <label for="inputPenerbit" class="form-label">Penerbit</label>
+              <input type="text" class="form-control" id="inputPenerbit" name="penerbit">
+            </div>
+            <div class="col-12">
+              <label for="inputISBN" class="form-label">ISBN</label>
+              <input type="text" class="form-control" id="inputISBN" name="isbn">
+            </div>
+            <div class="col-12">
+              <label for="inputHarga" class="form-label">Harga</label>
+              <input type="number" class="form-control" id="inputHarga" name="harga">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+
+            </div>
+          </form><!-- Vertical Form -->
+        </div>
+      </div>
+  </main><!-- End #main -->
+{% endblock %}
