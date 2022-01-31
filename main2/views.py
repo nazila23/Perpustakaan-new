@@ -213,26 +213,25 @@ def sirkulasi(request):
         'data': data,
     })
     
+ 
 
 def peminjaman(request,id):
-    no_panggil= models.exemplar.objects.all()
+    no_panggil= models.exemplar.objects.filter(pk=id)
+    print(no_panggil)
     if request.POST:
-        bakul=models.exemplar.objects.get(no_panggil=request.POST['no_panggil'])
+        no = request.POST['no_panggil']
+        no_panggil = models.exemplar.objects.filter(no_panggil=no)
+        test=request.POST['judul']
+        judul=models.buku.objects.get(judul=test)
         models.Pinjam.objects.create(
-        # no_panggil=bakul,
-        # judul=bakul.judul,
-        tgl_pinjam=request.POST['tp'],
-        tgl_kembali=request.POST['tk'],
+        no_panggil = no_panggil,
+        judul= judul,
+        tgl_pinjam = request.POST['tp'],
+        tgl_kembali = request.POST['tk'],
     )
     
-        # models.pinjam.objects.create(
-        #     no_pang=bakul,
-        #     tgl_pinjam=request.POST['tp'],
-        #     tgl_kembali=request.POST['tk'],
-        #     judul=request.POST['judul']
-        # )
-        # return redirect(request,'peminjaman.html')
-    data_pinjaman=models.Pinjam.objects.filter(no_panggil=id)
+    data_pinjaman=models.Pinjam.objects.all()
+    # data_pinjaman=models.Pinjam.objects.all()
     print(data_pinjaman)
     data = models.anggota.objects.filter(id=id).first()
     print(data)
@@ -241,6 +240,7 @@ def peminjaman(request,id):
         'data' :data,
         'data_pinjaman': data_pinjaman,
         'buku': buku,
+        'no_panggil' : no_panggil,
 })
 
 # def days_between(d1,d2):

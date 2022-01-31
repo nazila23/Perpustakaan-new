@@ -94,9 +94,10 @@ class exemplar (models.Model):
 
 
 class Pinjam (models.Model):
-    tgl_pinjam = models.DateField(auto_now_add=True)
-    tgl_kembali = models.DateField(auto_now=True)
+    tgl_pinjam = models.CharField(max_length=200,null=True, blank=True)
+    tgl_kembali = models.DateField(auto_now_add=True)
     denda = models.CharField(max_length=200)
+    judul = models.ForeignKey(buku, on_delete=DO_NOTHING)
     no_panggil = models.ForeignKey(exemplar,on_delete=DO_NOTHING)
 
     def tgl_pinjam_format(self):
