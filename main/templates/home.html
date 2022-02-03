@@ -15,7 +15,7 @@
         .atas {
             display: flex;
             height: 50px;
-            background-color: #01579B;
+            background-color: rgb(9, 9, 163);
         }
         .atas h5 {
             padding: 10px;
@@ -64,7 +64,7 @@
           .notif{
             list-style: none;
             padding-top: 10px;
-            padding-left: 50px;
+            padding-left: 20px;
             font-size: 20px;
           }
           .notif a , .pesan a , .user a{
@@ -79,7 +79,7 @@
           .user{
             list-style: none;
             padding-top: 0px;
-            padding-left: 350px;
+            padding-left: 700px;
             font-size: 20px;
           }
           .user label{
@@ -226,7 +226,7 @@
             padding: 20px;
             height: 200px;
             width: 100%;
-            background-color: #01579B;
+            background-color: #0f0f0f;
             margin-top: 30px;
          }
 
@@ -280,27 +280,28 @@
     </style>
   </head>
   <body>
-    <div class="atas">
-        <img src="" class="logo" alt="">
-        <h5>Perpustakaan Kita</h5>
-        <ul class="nav">
-            <li><a href="" class="cek">Kategori</a></li>
-        </ul>
-        <div class="search-container">
-            <form action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <li>
-          <li class="notif"><a href=""><i class='fa fa-bell'></i></a></li>
-          <li class="pesan"><a href=""><i class='fa fa-fw fa-envelope'></i></a></li>
-          <li class="user"><a href=""><i class='fa fa-user'></i><label for=>Aulia</label></a></li>
-        </li>
-       
-        
+      <div class="atas">
+          <img src="" class="logo" alt="">
+          <h5>Perpustakaan Kita</h5>
+          <ul class="nav">
+              <li><a href="" class="cek">Kategori</a></li>
+          </ul>
+          <div class="search-container">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+          </div>
 
-    </div>
+          <li>
+            <li class="notif"><a href=""><i class='fa fa-bell'></i></a></li>
+            <li class="pesan"><a href=""><i class='fa fa-fw fa-envelope'></i></a></li>
+            <li class="user"><a href=""><i class='fa fa-user'></i><label for=>Aulia</label></a></li>
+          </li> 
+        
+          
+
+      </div>
     <div class="sidebar">
         <h5>Filter</h5>
         <label>Perpus</label>
@@ -313,21 +314,20 @@
         
     </div>
     <div class="kiri">
-      <h6>Lokasi</h6>
+      <h6>KATEGORI</h6>
       <form action="/action_page.php">
         <input type="checkbox" id="vehicle1" name="vehicle1" value="1">
-        <label for="vehicle1"> JABODETABEK</label><br>
+        <label for="vehicle1"> KITAB</label><br>
         <input type="checkbox" id="vehicle2" name="vehicle2" value="2">
-        <label for="vehicle2"> JAKARTA</label><br>
+        <label for="vehicle2"> NOVEL</label><br>
         <input type="checkbox" id="vehicle3" name="vehicle3" value="3">
-        <label for="vehicle3"> YOGYAKARTA</label><br>
+        <label for="vehicle3"> POPULER</label><br>
         <input type="checkbox" id="vehicle4" name="vehicle4" value="4">
-        <label for="vehicle4"> BANDUNG</label><br>
+        <label for="vehicle4"> SEJARAH ISLAM</label><br>
         <input type="checkbox" id="vehicle5" name="vehicle5" value="5">
-        <label for="vehicle5"> JAWA TENGAH</label><br>
+        <label for="vehicle5"> MANAGENT SANTRI</label><br>
         <input type="checkbox" id="vehicle6" name="vehicle6" value="6">
-        <label for="vehicle6"> JAWA TIMUR</label><br><br>
-        <a href="https://www.w3schools.com">Lihat Selengkapnya</a>
+        <label for="vehicle6"> ILMU FIQIH</label><br><br>
 
       </form>
     </div>
@@ -335,38 +335,38 @@
       <div class="row">
         <div class="col-lg-4 mb-3">
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
-              <h5 class="card-title">Buku Keren</h5>
+              <h5 class="card-title">Kitab</h5>
 
               <!-- Slides only carousel -->
               <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/static/img/Tabloid-1.png" class="d-block w-100" alt="...">
+                    <img src="/static/img/Tabloid 1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Pemrogaman Web</h5>
-                      <p>Abdillah.Ag</p>
-                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <h5>Al-Qur'an</h5>
+                      <p>Bangkit Media</p>
+                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak Yogyakarta</P>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/static/img/slides-2.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Tabloid - 2.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Bisa Karena Biasa</h5>
-                      <p>Rizal Hidzh</p>
+                      <h5>Ta'lim Muta'alim</h5>
+                      <p>Dzarnuzi</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/static/img/slides-3.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Tabloid - 4.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Bisa Karena Biasa</h5>
-                      <p>Rizal Hidzh</p>
+                      <h5>kitab fathul izar</h5>
+                      <p>Rizal</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                 </div>
@@ -375,9 +375,9 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
-              <h5 class="card-title">Buku Terbaru</h5>
+              <h5 class="card-title">Buku Popler</h5>
 
               <!-- Slides with indicators -->
               <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -393,7 +393,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -402,7 +402,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -411,7 +411,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                 </div>
@@ -430,7 +430,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title">Buku Trending</h5>
 
@@ -443,7 +443,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -452,7 +452,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -461,7 +461,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Lihat Selengkapnya</button></a>
+                      <a href="{% url 'detail' %}"> <button type="button" class="btn btn-outline-warning" href>Detail</button></a>
                     </div>
                   </div>
                 </div>
@@ -484,38 +484,38 @@
 
         <div class="col-lg-4 mb-3">
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
-              <h5 class="card-title">Buku Kampus</h5>
+              <h5 class="card-title">Novel</h5>
 
               <!-- Slides with controls -->
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/static/img/slides-1.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Tabloid - 5.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Bisa Karena Biasa</h5>
+                      <h5>Diatas Sajadah Cinta</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/static/img/slides-2.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Tabloid - 6.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Sosiologi</h5>
-                      <p>Rizal Hidzh</p>
+                      <h5>Neger Lima Menara</h5>
+                      <p>Fauzi</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi UNU Yogyakarta</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/static/img/slides-3.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Tabloid - 7.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Bisa Karena Biasa</h5>
-                      <p>Rizal Hidzh</p>
+                      <h5>Pesantren Impian</h5>
+                      <p>Yasin Hidayat</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                 </div>
@@ -534,7 +534,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title">Sejarah</h5>
 
@@ -552,7 +552,7 @@
                       <h5>Pemrograman Web</h5>
                       <p>Abdillah.AG</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Perpus UNU Yogyakarta</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -561,7 +561,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -569,8 +569,8 @@
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Dakwah Masa Kini</h5>
                       <p>Ustadz. Ilzam Cawil</p>
-                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Perpus Graha Pustaka</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                 </div>
@@ -589,7 +589,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title">Sejarah</h5>
 
@@ -606,8 +606,8 @@
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Pemrograman Web</h5>
                       <p>Abdillah.AG</p>
-                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Perpus UNU Yogyakarta</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Perpus ponpes krapyak</P>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -616,7 +616,7 @@
                       <h5>Bisa Karena Biasa</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -625,7 +625,7 @@
                       <h5>Dakwah Masa Kini</h5>
                       <p>Ustadz. Ilzam Cawil</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Perpus Graha Pustaka</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                 </div>
@@ -647,38 +647,38 @@
         </div>
         <div class="col-lg-4">
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
-              <h5 class="card-title">Buku Kampus</h5>
+              <h5 class="card-title">Sejarah Islam</h5>
 
               <!-- Slides with controls -->
               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/static/img/slides-1.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Pict1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Bisa Karena Biasa</h5>
+                      <h5>Islam Nusantara</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/static/img/slides-2.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Pict2.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Sosiologi</h5>
+                      <h5>Islam Masuk Di Indonesia</h5>
                       <p>Rizal Hidzh</p>
-                      <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi UNU Yogyakarta</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <P><span><i class="fas fa-map-marker-alt"></i></span> Perpus Ponpes Al-Munawir Krapyak</P>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/static/img/slides-3.jpg" class="d-block w-100" alt="...">
+                    <img src="/static/img/Pict3.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Bisa Karena Biasa</h5>
+                      <h5>Sejarah islam Nusantara</h5>
                       <p>Rizal Hidzh</p>
                       <P><span><i class="fas fa-map-marker-alt"></i></span> lokasi Ponpes Krapyak</P>
-                      <button type="button" class="btn btn-outline-warning">Lihat Selengkapnya</button>
+                      <button type="button" class="btn btn-outline-warning">Detail</button>
                     </div>
                   </div>
                 </div>
@@ -697,7 +697,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title">Sejarah</h5>
 
@@ -752,7 +752,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title">Sejarah</h5>
 
@@ -822,7 +822,7 @@
       </div>
     <div class="footer">
         <div class="about">
-            <img src="https://cdn-2.tstatic.net/tribunnews/foto/bank/images/Buku-ilustrasi.jpg" alt="">
+            <img src="{%static 'images/icons/buk.png' %}" alt="Ebook">
             <p>Menjadi pusat sumber belajar berstandar internasional yang mendukung secara aktif untuk memelihara dan meningkatkan efisiensi dan efektifitas proses belajar mengajar.</p>
         </div>
         <div class="kami">

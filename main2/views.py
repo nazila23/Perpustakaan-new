@@ -17,7 +17,6 @@ def biblografi(request):
             judul = request.POST ['Judul'],
             pengarang = request.POST ['Pengarang'],
             edisi = request.POST ['Edisi'],
-            tipe_isi = request.POST ['isi'],
             tipe_media = request.POST ['media'],
             isbn = request.POST ['isbn'],
             penerbit = request.POST ['penerbit'],
@@ -50,7 +49,7 @@ def edit_biblografi(request,id):
             judul = request.POST['judul'],
             pengarang = request.POST['pengarang'],
             edisi = request.POST['edisi'],
-            tipe_isi = request.POST['tipe_isi'],
+            # tipe_isi = request.POST['tipe_isi'],
             tipe_media = request.POST['tipe_media'],
             isbn = request.POST['isbn'],
             penerbit = request.POST['penerbit'],
@@ -58,7 +57,7 @@ def edit_biblografi(request,id):
             tempat_terbit = request.POST['tempat_terbit'],
             klasifikasi = request.POST['klasifikasi'],
             bahasa = request.POST['bahasa'],
-            cover = request.POST['cover'],
+            cover = request.FILES ['cover'],
             beranda = request.POST['beranda'],
         )
         return redirect('biblografi')
@@ -217,12 +216,15 @@ def sirkulasi(request):
 
 def peminjaman(request,id):
     no_panggil= models.exemplar.objects.filter(pk=id)
-    print(no_panggil)
+    # print(no_panggil)
     if request.POST:
-        no = request.POST['no_panggil']
-        no_panggil = models.exemplar.objects.filter(no_panggil=no)
+        no = int(request.POST['no_panggil'])
+        no_panggil = models.exemplar.objects.get(pk=no)
         test=request.POST['judul']
+        print(test)
+        # print(type(test))
         judul=models.buku.objects.get(judul=test)
+        print(judul)
         models.Pinjam.objects.create(
         no_panggil = no_panggil,
         judul= judul,
@@ -230,12 +232,15 @@ def peminjaman(request,id):
         tgl_kembali = request.POST['tk'],
     )
     
-    data_pinjaman=models.Pinjam.objects.all()
     # data_pinjaman=models.Pinjam.objects.all()
-    print(data_pinjaman)
+    data_pinjaman=models.Pinjam.objects.all()
+    # print(data_pinjaman)
     data = models.anggota.objects.filter(id=id).first()
-    print(data)
+    # print(data)
     buku= models.exemplar.objects.all()
+    print(buku)
+    for b in buku:
+     print(b.judul)
     return render(request,'peminjaman.html',{
         'data' :data,
         'data_pinjaman': data_pinjaman,
@@ -243,16 +248,15 @@ def peminjaman(request,id):
         'no_panggil' : no_panggil,
 })
 
-# def days_between(d1,d2):
-#     d1 = datetime.strptime(d1,"%y-%m-%d")
-#     d2 = datetime.strptime(d2,"%y-%m-%d" )
-#     return  redirect (abs((d2-d1).days),'peminjaman')
+# def kembali(request):
+#     data = models.Pinjam.objects.all()
+#     buku= models.exemplar.objects.all()
+#     return render (request,'kembali.html', {
+#         'data': data,
+#         'buku':buku,
+#     })
 
-# if abs > 3:
-#     denda = abs * 2000
-# else :
-#     denda = abs * 0
-   
+
 def exemp(request):
     cari_data = models.buku.objects.all()
     return render(request, 'exemplar.html', {
@@ -262,7 +266,7 @@ def exemp(request):
 
 
 def delete_pinjam(request,id):
-    models.pinjam.objects.filter(pk=id).delete()
+    models.Pinjam.objects.filter(pk=id).delete()
     messages.success(request, f'Hapus Berhasil')
     return redirect ('peminjaman')
 

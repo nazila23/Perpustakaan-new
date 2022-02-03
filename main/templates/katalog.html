@@ -78,7 +78,7 @@
           .user{
             list-style: none;
             padding-top: 0px;
-            padding-left: 350px;
+            padding-left: 550px;
             font-size: 20px;
           }
           .user label{
@@ -207,7 +207,11 @@
             height: 30px;
             background-color: burlywood;
           }
-          
+          .back{
+             width: 100%;
+             height: 100%;
+           }
+           
     </style>
   </head>
   <body>
@@ -215,7 +219,7 @@
         <img src="" class="logo" alt="">
         <h5>Perpustakaan Kita</h5>
         <ul class="nav">
-            <li><a href="" class="cek">Kategori</a></li>
+            <!-- <li><a href="" class="cek">Kategori</a></li> -->
         </ul>
         <div class="search-container">
             <form action="/action_page.php">
@@ -223,15 +227,17 @@
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
-        <li class="notif"><a href=""><i class='fa fa-bell'></i></a></li>
-        <li class="pesan"><a href=""><i class='fa fa-fw fa-envelope'></i></a></li>
-        <li class="user"><a href=""><i class='fa fa-user'></i><label for=>Farhan</label></a></li>
+        <!-- <li class="notif"><a href=""><i class='fa fa-bell'></i></a></li>
+        <li class="pesan"><a href=""><i class='fa fa-fw fa-envelope'></i></a></li> -->
+        <li class="user"><a href=""><i class='fa fa-user'></i><label for>Cicik</label></a></li>
     </div>
     <div class="header">
         <div class="warna">
             <h1>KATALOG KOLEKSI</h1>
         </div>
-        <img src="https://cdn.pixabay.com/photo/2016/11/14/22/18/beach-1824855_960_720.jpg" alt="">
+        <div class="back">
+        <img src="{%static 'images/lb1.jpg' %}"alt="">
+      </div>
     </div>
     <div class="sidebar">
       <section class="section">
@@ -284,7 +290,7 @@
         </div>
         <nav class="navbar navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand">Kelas Pencarian >></a>
+            <!-- <a class="navbar-brand">Kelas Pencarian >></a> -->
             <form action="">
             <!-- <div class="row mb-5">
               <label for="ids" class="col-md-5 col-lg-4 col-form-label">Semua Kolom</label>
@@ -308,13 +314,13 @@
 
           
         </nav>
-        <div class="text">
+        <!-- <div class="text">
           <p> Untuk melakukan proses pencarian silahkan memasukkan
             kata kunci pada kotak yang telah disediakan dan kemudian tekan tombol "Cari".
             Untuk mendapatkan hasil pencarian yang akurat maka gunakan kata kunci yang
             relevan dengan informasi yang hendak dicari.</p>
             <img src="/static/img/kol.PNG" alt="">
-        </div>
+        </div> -->
       <div class="row">
         <div class="col-lg-4 mb-3">
           <div class="card">

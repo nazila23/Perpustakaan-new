@@ -77,8 +77,9 @@
                       <div class="col-md-5 col-lg-2">
                         <select id="inputState" name="isi" class="form-select">
                           <option selected>Pilih</option>
-                          <option>Fiksi</option>
-                          <option>Pendidikan</option>
+                          <option>Buku</option>
+                          <option>Kitab</option>
+                          
                         </select>
                       </div>
                         
@@ -94,7 +95,7 @@
   
   
                     <div class="row mb-3">
-                      <label for="isbn" class="col-md-4 col-lg-3 col-form-label">ISBN/ISSN</label>
+                      <label for="isbn" class="col-md-4 col-lg-3 col-form-label">ISBN/ISSN/No.kitab</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="isbn" type="text" class="form-control" id="isbn" >
                       </div>
@@ -128,8 +129,11 @@
                       <div class="col-md-8 col-lg-5">
                         <select id="inputState" name="klasifikasi" class="form-select">
                           <option selected>Pilih</option>
-                          <option>123</option>
-                          <option>23432</option>
+                          <option>Umum</option>
+                          <option>Tafsir</option>
+                          <option>Tauhid</option>
+                          <option>Aqidah</option>
+                          <option>Fiqih</option>
                         </select>
                       </div>
                     </div>
@@ -139,6 +143,7 @@
                       <div class="col-md-8 col-lg-5">
                         <select id="inputState" name="bhs" class="form-select">
                           <option selected>Pilih</option>
+                          <option>Bahasa Arab</option>
                           <option>Bahasa Indonesia</option>
                           <option>English</option>
                         </select>
@@ -186,7 +191,6 @@
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">Judul</th>
-                        <th scope="col">Info Detail Spesifik</th>
                         <th scope="col">Pengarang</th>
                         <th scope="col">Cover</th>
                         <th scope="col"></th>
@@ -198,7 +202,6 @@
                     <tr>
                       <td>{{forloop.counter}}</td>
                       <td>{{z.judul}}</td>
-                      <td>{{z.info_detail_spesifikasi}}</td>
                       <td>{{z.pengarang}}</td>
                       <td> <img src="{{z.cover.url}}"></td>
                       <td>

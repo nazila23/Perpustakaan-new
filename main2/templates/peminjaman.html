@@ -31,7 +31,7 @@
               <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Pinjam Saat ini</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-denda">Denda</button>
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-denda">Denda </button>
             </li>
             <li class="nav-item">
               <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-sejarah">Sejarah Peminjaman</button>
@@ -42,14 +42,16 @@
               <div class="tab-pane fade show active profile-overview" id="profile-overview">
                 <div class="tab-content pt-12">   
                   <br>         
-                  <form class="col-4" action="" method="post">
-                      {% csrf_token %} 
+                  <form class="col-4" action="" class="uniForm" method="post">
+                    {% load crispy_forms_tags %}
+                      {% csrf_token %}
+                      {{forms|crispy}}
                 <div class="row">
                   <div class="col-md-11,5">
                     <label for="no_panggil">No Panggil</label>
                       <select class="form-select" name="no_panggil" aria-label="Default select example" required>
                           {% for d in buku %}
-                          <option value="{{d}}">{{d.no_panggil}}</option>
+                          <option value="{{d.id}}">{{d.no_panggil}}</option>
                           {% endfor %}
                       </select>
                   </div>
@@ -59,7 +61,7 @@
                     <label for="judul">Judul</label>
                       <select class="form-select" name="judul" aria-label="Default select example" required>
                           {% for d in buku %}
-                          <option value="{{d}}">{{d.judul}}</option>
+                          <option value="{{d.judul}}">{{d.judul}}</option>
                           {% endfor %}
                       </select>
                   </div>
@@ -106,7 +108,7 @@
                 {% for d in data_pinjaman %}                      
                 <tr>
                   <td>{{forloop.counter}}</td>
-                  <td>{{d.no_pang.no_panggil}}</td>
+                  <td>{{d.no_panggil.no_panggil}}</td>
                   <td>{{d.judul}}</td>
                   <td>{{d.tgl_pinjam}}</td>
                   <td>{{d.tgl_kembali}}</td>
@@ -135,7 +137,7 @@
                 {% for d in data_pinjaman %}                      
                 <tr>
                   <td>{{forloop.counter}}</td>
-                  <td>{{d.no_pang.no_panggil}}</td>
+                  <td>{{d.no_panggil.no_panggil}}</td>
                   <td>{{d.judul}}</td>
                   <td>{{d.tgl_pinjam}}</td>
                   <td>{{d.tgl_kembali}}</td>
@@ -165,7 +167,7 @@
                 {% for d in data_pinjaman %}                      
                 <tr>
                   <td>{{forloop.counter}}</td>
-                  <td>{{d.no_pang.no_panggil}}</td>
+                  <td>{{d.no_panggil.no_panggil}}</td>
                   <td>{{d.judul}}</td>
                   <td>{{d.tgl_pinjam}}</td>
                   <td>{{d.tgl_kembali}}</td>

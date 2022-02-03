@@ -1,0 +1,55 @@
+{% extends "sidebarpustaka.html" %}
+{% block content %}
+{% load static %}
+<section class="section profile">
+      <h4>Sirkulasi</h4>
+      <div class="card">
+        <div class="card-body pt-12">
+            {% csrf_token %} 
+              <div class="row">
+                <div class="col-md-1">
+                  <label class="mt-1">ID</label>
+                </div>:                    
+                <div class="col">
+                  {{data.id}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <label class="mt-1">Nama</label>
+                </div>:                
+                <div class="col">
+                  {{data.nama}}
+                </div>
+              </div>
+              <br>
+              
+          <div class="tab-content pt-6">
+            <div class="tab-content pt-6">
+              <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                <div class="tab-content pt-12">   
+                  <br>         
+                  <form class="col-4" action="" class="uniForm" method="post">
+                    {% load crispy_forms_tags %}
+                      {% csrf_token %}
+                      {{forms|crispy}}
+                <div class="row">
+                  <div class="col-md-11,5">
+                    <label for="no_panggil">No Panggil</label>
+                      <select class="form-select" name="no_panggil" aria-label="Default select example" required>
+                          {% for d in data %}
+                          <option value="{{d.id}}">{{d.no_panggil}}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+                </div>
+                
+                
+               
+        
+        </div>
+      </div>
+    </div>
+  </div>     
+</section>
+{% endblock %}

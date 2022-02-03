@@ -26,7 +26,8 @@ urlpatterns = [
     path('peminjaman/<id>/delete_pinjam/', views.delete_pinjam),
     path('cek/', views.cek, name='cek'),
     path('cek/<id>/delete_cek', views.delete_cek),
-    path('karyawan/', views.karyawan, name='karyawan'),      
+    path('karyawan/', views.karyawan, name='karyawan'),
+    # path('kembali/<id>/', views.kembali, name='kembali'),       
 ]
 if settings.DEBUG: urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

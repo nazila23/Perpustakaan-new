@@ -7,3 +7,7 @@ class ExamplarForm(ModelForm):
     class Meta:
         model =models.exemplar
         exclude =[]
+class PinjamForm(ModelForm):
+    class Meta:
+        model =models.Pinjam
+        exclude =[]

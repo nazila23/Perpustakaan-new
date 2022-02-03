@@ -94,13 +94,19 @@ class exemplar (models.Model):
 
 
 class Pinjam (models.Model):
-    tgl_pinjam = models.CharField(max_length=200,null=True, blank=True)
-    tgl_kembali = models.DateField(auto_now_add=True)
+    tgl_pinjam = models.DateField(auto_now_add=True,blank=True)
+    tgl_kembali = models.DateField(auto_now=True, blank=True)
     denda = models.CharField(max_length=200)
     judul = models.ForeignKey(buku, on_delete=DO_NOTHING)
     no_panggil = models.ForeignKey(exemplar,on_delete=DO_NOTHING)
 
-    def tgl_pinjam_format(self):
-        return self.tgl_pinjam.strftime('%Y-%m-%d')
-    def tgl_kembali_format(self):
-        return self.tgl_kembali.strftime('%Y-%m-%d')
+class Kembali (models.Model):
+    tgl_pinjam = models.DateField(auto_now_add=True,blank=True)
+    tgl_kembali = models.DateField(auto_now=True, blank=True)
+    denda = models.CharField(max_length=200)
+    judul = models.ForeignKey(buku, on_delete=DO_NOTHING)
+    no_panggil = models.ForeignKey(exemplar,on_delete=DO_NOTHING)
+    # def tgl_pinjam_format(self):
+    #     return self.tgl_pinjam.strftime('%Y-%m-%d')
+    # def tgl_kembali_format(self):
+    #     return self.tgl_kembali.strftime('%Y-%m-%d')
